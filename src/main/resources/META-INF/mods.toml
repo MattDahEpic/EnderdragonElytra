@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[34,)"
+license="All rights reserved"
+issueTrackerURL="https://github.com/MattDahEpic/EnderdragonElytra/issues"
+
+[[mods]]
+    modId="enderdragonelytra"
+    version="${file.jarVersion}"
+    displayName="Enderdragon Elytra"
+    updateJSONURL="https://raw.githubusercontent.com/MattDahEpic/Version/master/enderdragonelytra.json"
+    displayURL="http://minecraft.curseforge.com/projects/enderdragon-elytra"
+    credits="Thanks to the entire open source mod community from which I used code."
+    authors="MattDahEpic"
+    description='''
+    Makes the enderdragon drop an elytra.
+    '''
+
+    [[dependencies.enderdragonelytra]]
+        modId="forge"
+        mandatory=true
+        versionRange="[34,)"
+        ordering="NONE"
+        side="BOTH"
+    [[dependencies.enderdragonelytra]]
+        modId="minecraft"
+        mandatory=true
+        versionRange="[1.16.3]"
+        ordering="NONE"
+        side="BOTH"
