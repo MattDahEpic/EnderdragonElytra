@@ -1,9 +1,9 @@
 package com.mattdahepic.enderdragonelytra;
 
-import net.minecraft.entity.boss.dragon.EnderDragonEntity;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -15,9 +15,9 @@ public class EnderdragonElytra {
     }
 
     public void entityDeath(LivingDeathEvent e) {
-        if (e.getEntity() instanceof EnderDragonEntity) {
-            EnderDragonEntity d = (EnderDragonEntity) e.getEntity();
-            d.world.addEntity(new ItemEntity(d.world,d.getPosX(),d.getPosY(),d.getPosZ(),new ItemStack(Items.ELYTRA)));
+        if (e.getEntity() instanceof EnderDragon) {
+            EnderDragon d = (EnderDragon) e.getEntity();
+            d.level.addFreshEntity(new ItemEntity(d.level,d.getX(),d.getY(),d.getZ(),new ItemStack(Items.ELYTRA)));
         }
     }
 }
